@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <h1>Splitter</h1>
+        </header>
+        <div class="tipCalc-wrapper">
+          <!-- Tip calculator inputs -->
+          <div class="tipCalc-inputs">
+            <div class="tipClac-bill">
+              <label class="title" for="bill-value">Bill</label>
+              <input type="text" id="bill-value" placeholder="0.0" />
+            </div>
+            <div class="tip-percentage">
+              <span class="title">Select Tip %</span>
+              <ul>
+                <li><button>5%</button></li>
+                <li><button>10%</button></li>
+                <li class="selected"><button>15%</button></li>
+                <li><button>25%</button></li>
+                <li><button>50%</button></li>
+                <li>
+                  <input
+                    class="custom-tip"
+                    type="text"
+                    id="bill-price"
+                    placeholder="Custom"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="tip-number-of-people">
+              <label class="title" for="people-number"> Number of People</label>
+              <input type="text" id="people-number" placeholder="1" />
+            </div>
+          </div>
+
+          <!-- Tip calculator results -->
+          <div class="tipCalc-results">
+            <div class="tip-amount">
+              <p class="result-title">
+                Tip Amount <span class="person"><br />/ person</span>
+              </p>
+              <span id="tip-amount" class="result-number">$0.00</span>
+            </div>
+            <div class="total">
+              <p class="result-title">
+                Total <span class="person"><br />/ person</span>
+              </p>
+              <span id="total-value" class="result-number">$0.00</span>
+            </div>
+            <button class="reset disabled">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/Emad-Essayed">Emad Essayed Bedeer</a>.
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

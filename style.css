@@ -1,0 +1,307 @@
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Light-strong-cyan: hsl(174, 88%, 83%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan-font: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --font-family: "Space Mono", monospace;
+  --font-size-inputs: 24px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5;
+  padding: 0 0.8rem;
+  background-color: var(--Very-light-grayish-cyan);
+  border: none;
+  outline: none;
+  text-align: right;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
+  font-family: var(--font-family);
+  border-radius: 0.3rem;
+}
+
+input,
+button {
+  font-family: var(--font-family);
+  font-weight: 700 !important;
+  border: none;
+  outline: none;
+}
+
+input:hover,
+input:focus {
+  border: 2px solid var(--Strong-cyan) !important;
+}
+
+button {
+  cursor: pointer !important;
+}
+
+button:hover {
+  background-color: var(--Light-strong-cyan) !important;
+  color: var(--Very-dark-cyan) !important;
+}
+
+button.disabled {
+  background-color: var(--Dark-grayish-cyan-font) !important;
+  cursor: not-allowed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  /* padding: 3rem 1.1rem; */
+  background-color: var(--Light-grayish-cyan);
+}
+
+header {
+  max-width: 5rem;
+  margin: 0 auto 2rem;
+  padding-top: 2rem;
+}
+header h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  word-wrap: break-word;
+  color: var(--Very-dark-cyan);
+}
+
+.tipCalc-wrapper {
+  padding: 2rem 1rem;
+  background-color: var(--White);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  position: relative;
+  top: -10%;
+}
+
+.tipCalc-wrapper .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--Dark-grayish-cyan-font);
+}
+
+/* Tip calculator inputs  */
+.tipCalc-inputs {
+  margin-bottom: 3rem;
+}
+
+.tipCalc-inputs .tipClac-bill {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.tipCalc-inputs .tipClac-bill::before {
+  content: url("images/icon-dollar.svg");
+  position: absolute;
+  left: 7%;
+  top: 59%;
+}
+
+.tip-percentage {
+  margin-bottom: 3rem;
+}
+
+.tipCalc-inputs .tip-percentage ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.tipCalc-inputs .tip-percentage ul li {
+  flex: 1 0 35%;
+  max-width: 45%;
+  margin-bottom: 0.6rem;
+}
+
+.tipCalc-inputs .tip-percentage ul li button,
+.tipCalc-inputs .tip-percentage ul li input {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0;
+  border: none;
+  outline: none;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+}
+
+.tipCalc-inputs .tip-percentage ul li.selected button {
+  background-color: var(--Strong-cyan) !important;
+}
+
+.tipCalc-inputs .tip-percentage ul li input.custom-tip {
+  padding-right: 0.4rem;
+  color: var(--Very-dark-cyan);
+}
+
+.tipCalc-inputs .tip-percentage ul li input {
+  background-color: var(--Very-light-grayish-cyan);
+}
+
+.tipCalc-inputs .tip-number-of-people {
+  position: relative;
+}
+
+.tipCalc-inputs .tip-number-of-people::before {
+  content: url("images/icon-person.svg");
+  position: absolute;
+  left: 7%;
+  top: 59%;
+}
+
+.tipCalc-inputs .tip-number-of-people.error::after {
+  content: "Can't be zero";
+  position: absolute;
+  right: 7%;
+  top: 10%;
+  color: rgb(202, 21, 21);
+}
+
+.tipCalc-inputs .tip-number-of-people.error input {
+  border: 2px solid rgb(202, 21, 21);
+}
+
+/* Tip calculator results */
+.tipCalc-results {
+  background-color: var(--Very-dark-cyan);
+  padding: 2.5rem 1.3rem;
+  border-radius: 0.8rem;
+  color: var(--White);
+}
+
+.tipCalc-results > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.tipCalc-results > div .result-title {
+  flex-basis: 40%;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tipCalc-results > div .result-title span {
+  color: var(--Dark-grayish-cyan);
+  font-size: 0.8rem;
+}
+
+.tipCalc-results > div .result-number {
+  color: var(--Strong-cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.tipCalc-results .reset {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-family: sans-serif;
+}
+
+/* Media 600px */
+@media (min-width: 600px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Large media */
+@media (min-width: 992px) {
+  body {
+    background-color: var(--Light-grayish-cyan);
+  }
+
+  .container {
+    max-width: 1170px;
+    background-color: transparent;
+    padding: 3rem 0 2rem;
+  }
+
+  .tipCalc-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05),
+      0px 20px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .tipCalc-inputs {
+    flex-basis: 40%;
+    margin-bottom: 0;
+  }
+
+  .tipCalc-inputs .tipClac-bill {
+    margin-bottom: 2rem;
+  }
+
+  .tip-percentage {
+    margin-bottom: 2rem;
+  }
+
+  .tipCalc-inputs .tip-percentage ul li {
+    flex-basis: 29%;
+    max-width: 29%;
+    margin-bottom: 0.6rem;
+  }
+
+  .tipCalc-results {
+    flex-basis: 50%;
+  }
+
+  .tipCalc-results .reset {
+    margin-top: 8rem;
+  }
+}
