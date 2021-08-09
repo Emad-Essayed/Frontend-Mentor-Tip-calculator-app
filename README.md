@@ -10,11 +10,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -29,13 +25,15 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop preview](./design/desktop-preview.jpg)
-![Mobile preview](./design/mobile-preview.jpg)
+![Mobile preview](./design/mobile-design.jpg)
 
 ### Links
 
 Solution URL: [https://github.com/Emad-Essayed/Frontend-Mentor-Tip-calculator-app](https://github.com/Emad-Essayed/Frontend-Mentor-Tip-calculator-app)
 
 - Live Site URL: [https://emad-essayed.github.io/Frontend-Mentor-Tip-calculator-app/](https://emad-essayed.github.io/Frontend-Mentor-Tip-calculator-app/)
+
+## My process
 
 ### Built with
 
